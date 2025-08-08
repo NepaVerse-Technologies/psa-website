@@ -113,7 +113,6 @@ export default function Home() {
                       name={testimonial.name}
                       testimonialText={testimonial.testimonialText}
                       position={testimonial.position}
-                      photoPath={testimonial.photoPath}
                     />
                   </CarouselItem>
                 );

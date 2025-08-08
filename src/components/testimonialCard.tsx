@@ -5,13 +5,11 @@ const TestimonialCard = ({
   name,
   testimonialText,
   position,
-  photoPath,
 }: {
   color: string;
   name: string;
   testimonialText: string;
   position: string;
-  photoPath: string;
 }) => {
   return (
     <div className="w-full max-w-[340px] relative rounded-xl shadow-xl border mx-auto overflow-hidden">

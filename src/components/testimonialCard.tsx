@@ -12,7 +12,7 @@ const TestimonialCard = ({
   position: string;
 }) => {
   return (
-    <div className="w-full max-w-[340px] relative rounded-xl shadow-xl border mx-auto overflow-hidden">
+    <div className="w-full relative rounded-xl shadow-xl border mx-auto overflow-hidden">
       <div className="p-8 h-full">
         {/* quote part */}
         <svg

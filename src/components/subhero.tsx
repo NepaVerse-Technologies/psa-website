@@ -9,7 +9,7 @@ const SubHero = ({ subHeroId }: { subHeroId: string }) => {
   const router = useRouter();
   const subHeroContent = subHeroItems.find((item) => item.id === subHeroId);
   return (
-    <section className="bg-dark-blue py-16 px-5 md:px-32 flex md:relative">
+    <section className="bg-primary pt-32 pb-16 px-5 md:px-32 flex md:relative ">
       <div className="space-y-8">
         <p className="text-base text-white">{subHeroContent?.breadCrumb}</p>
         <h1 className="text-white md:w-[35ch]">
@@ -22,7 +22,7 @@ const SubHero = ({ subHeroId }: { subHeroId: string }) => {
         <Button
           type="button"
           variant="outline"
-          className="btn-primary-alt font-secondary font-semibold"
+          className=" font-secondary font-semibold"
           onClick={() => {
             router.push("/");
           }}

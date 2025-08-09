@@ -13,6 +13,8 @@ import {
 } from "@/components/ui/carousel";
 import ServicesSection from "@/components/ServicesSection";
 import { homepageServicesItems } from "@/lib/constants";
+import { BookOpen, Award, HeadphonesIcon } from "lucide-react";
+import { OurAim, WhoWeAre } from "@/components/CompanyInfo";
 
 export default function Home() {
   return (
@@ -20,39 +22,62 @@ export default function Home() {
       <Hero />
 
       {/* HIGHLIGHT SECTION START */}
-      <section className="px-5 pt-16 pb-12 md:px-32">
-        <h1 className="md:w-[70%]">
-          Find out what makes{" "}
-          <span className="text-highlight-blue">Pioneer Sprach Academy</span>{" "}
-          one of the best!
-        </h1>
-        <div className="py-4 md:w-[80%]">
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-            fugit quisquam voluptate consectetur, aliquam ipsam nam rem
-            doloremque facere? Ipsam, aliquam rerum. Deleniti rerum ratione eos
-            quos sint ullam quibusdam.
-          </p>
-        </div>
-        <div className="flex items-center">
-          <div className="text-gray-500 font-accent font-semibold text-base py-2">
-            SEE WHY WE ARE THE BEST
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Find out what makes{" "}
+              <span className="text-blue-600">Pioneer Sprach Academy</span> one
+              of the best!
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard
+            </p>
           </div>
-          <ArrowRight className="text-gray-500 ml-1 w-[20px] mb-[3px]" />
-        </div>
 
-        <div className="flex justify-between text-center pt-5 md:px-12">
-          <div>
-            <Image src={bookOpen} className="w-[70%] m-auto" alt="Book Open" />
-            <p className="font-bold text-xl font-primary mt-3">Lorem Ipsum</p>
+          <div className="flex justify-center mb-8">
+            <div className="text-gray-500 text-sm font-bold">
+              SEE WHY WE ARE THE BEST →
+            </div>
           </div>
-          <div>
-            <Image src={bookOpen} className="w-[70%] m-auto" alt="Book Open" />
-            <p className="font-bold text-xl font-primary mt-3">Lorem Ipsum</p>
-          </div>
-          <div>
-            <Image src={bookOpen} className="w-[70%] m-auto" alt="Book Open" />
-            <p className="font-bold text-xl font-primary mt-3">Lorem Ipsum</p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <BookOpen className="h-8 w-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                Expert Teaching
+              </h3>
+              <p className="text-gray-600">
+                Native German speakers with certified teaching experience
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Award className="h-8 w-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                Proven Results
+              </h3>
+              <p className="text-gray-600">
+                95% visa approval rate and excellent exam pass rates
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <HeadphonesIcon className="h-8 w-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                24/7 Support
+              </h3>
+              <p className="text-gray-600">
+                Round-the-clock assistance throughout your journey
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -79,9 +104,7 @@ export default function Home() {
             subHeadingItems={subHeadingItems}
             learnMoreLinkUrl={learnMoreLinkUrl}
             imageUrl={imageUrl}
-            passedClassNames={
-              i % 2 === 0 ? "bg-normal-grey" : "flex-row-reverse"
-            }
+            flipAlignment={i % 2 === 0}
             imageHeight={imageHeight}
             imageWidth={imageWidth}
           />
@@ -89,15 +112,20 @@ export default function Home() {
       )}
       {/* SERVICES SECTION END */}
 
+      <section className="container md:p-20 p-6 flex max-md:flex-col items-center gap-16">
+        <WhoWeAre />
+        <OurAim />
+      </section>
+
       {/* Testimonial Section */}
-      <section className="px-5 pt-16 pb-12 md:px-32">
+      <section className="px-5 pt-16 pb-12 md:px-32 bg-gray-100">
         <div>
-          <div className="space-y-6 mb-12">
-            <p className="text-highlight-blue font-accent text-2xl font-semibold text-center">
+          <div className="space-y-4 mb-12">
+            <p className="text-primary font-accent text-xl font-semibold text-center">
               TESTIMONIALS
             </p>
-            <h2 className=" text-center">SEE WHAT OUR STUDENTS HAVE TO SAY</h2>
-            <div className="w-32 h-3 bg-highlight-blue mx-auto"></div>
+            <h3 className=" text-center">SEE WHAT OUR STUDENTS HAVE TO SAY</h3>
+            <div className="w-32 h-2 bg-primary mx-auto"></div>
           </div>
           <Carousel className="w-[90%] mx-auto">
             <CarouselContent className="">
@@ -118,8 +146,8 @@ export default function Home() {
                 );
               })}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
+            <CarouselPrevious className="max-md:-left-8" />
+            <CarouselNext className="max-md:-right-8" />
           </Carousel>
         </div>
       </section>

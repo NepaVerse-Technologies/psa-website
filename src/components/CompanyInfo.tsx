@@ -2,49 +2,19 @@ import React from "react";
 
 export const WhoWeAre = () => {
   return (
-    <div>
+    <div className="container">
       <div className="mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
           Who <span className="text-blue-600">We Are</span>
         </h2>
-        <p className="text-gray-600 text-lg leading-relaxed mb-6">
+        <p className="text-gray-600 text-lg mb-6">
           Pioneer Sprach Academy is a leading educational consultancy
           specializing in German language training and visa processing services.
           With over 5 years of experience, we have successfully guided more than
           2000 students in achieving their dreams of studying and working in
           Germany.
         </p>
-        {/* <p className="text-gray-600 text-lg leading-relaxed mb-8">
-          Our team consists of certified German language instructors,
-          experienced visa consultants, and dedicated support staff who are
-          committed to providing personalized guidance throughout your journey.
-        </p> */}
-
-        {/* Key Features */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="flex items-center space-x-3">
-            <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
-            <span className="text-gray-700 font-medium">
-              Certified Instructors
-            </span>
-          </div>
-          <div className="flex items-center space-x-3">
-            <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
-            <span className="text-gray-700 font-medium">
-              5+ Years Experience
-            </span>
-          </div>
-          <div className="flex items-center space-x-3">
-            <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
-            <span className="text-gray-700 font-medium">
-              2000+ Success Stories
-            </span>
-          </div>
-          <div className="flex items-center space-x-3">
-            <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
-            <span className="text-gray-700 font-medium">95% Success Rate</span>
-          </div>
-        </div>
+        <StatisticsRow />
       </div>
     </div>
   );
@@ -115,8 +85,8 @@ export const OurAim = () => {
 
         <div className="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-600">
           <p className="text-blue-800 font-medium italic">
-            "We believe that language is the key to unlocking global
-            opportunities, and we're here to help you turn that key."
+            {`"We believe that language is the key to unlocking global
+            opportunities, and we're here to help you turn that key."`}
           </p>
         </div>
       </div>
@@ -126,20 +96,20 @@ export const OurAim = () => {
 
 export const StatisticsRow = () => {
   return (
-    <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-      <div className="bg-white rounded-lg p-6 shadow-sm">
+    <div className="mt-16 grid grid-cols-2 md:grid-cols-4 justify-between gap-8 text-center">
+      <div className="bg-white rounded-lg p-6 shadow-lg border border-gray-300 hover:scale-105 transition-all duration-300">
         <div className="text-3xl font-bold text-blue-600 mb-2">95%</div>
         <div className="text-gray-600 text-sm">Visa Approval Rate</div>
       </div>
-      <div className="bg-white rounded-lg p-6 shadow-sm">
+      <div className="bg-white rounded-lg p-6 shadow-lg border border-gray-300 hover:scale-105 transition-all duration-300">
         <div className="text-3xl font-bold text-blue-600 mb-2">2000+</div>
         <div className="text-gray-600 text-sm">Students Trained</div>
       </div>
-      <div className="bg-white rounded-lg p-6 shadow-sm">
+      <div className="bg-white rounded-lg p-6 shadow-lg border border-gray-300 hover:scale-105 transition-all duration-300">
         <div className="text-3xl font-bold text-blue-600 mb-2">50+</div>
         <div className="text-gray-600 text-sm">Partner Institutions</div>
       </div>
-      <div className="bg-white rounded-lg p-6 shadow-sm">
+      <div className="bg-white rounded-lg p-6 shadow-lg border border-gray-300 hover:scale-105 transition-all duration-300">
         <div className="text-3xl font-bold text-blue-600 mb-2">24/7</div>
         <div className="text-gray-600 text-sm">Support Available</div>
       </div>

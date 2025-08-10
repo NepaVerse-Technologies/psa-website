@@ -1,6 +1,3 @@
-import Image from "next/image";
-import bookOpen from "../../public/book-open.png";
-import { ArrowRight } from "lucide-react";
 import Hero from "@/components/hero";
 import TestimonialCard from "@/components/testimonialCard";
 import { testimonialData } from "@/lib/constants";
@@ -14,7 +11,7 @@ import {
 import ServicesSection from "@/components/ServicesSection";
 import { homepageServicesItems } from "@/lib/constants";
 import { BookOpen, Award, HeadphonesIcon } from "lucide-react";
-import { OurAim, WhoWeAre } from "@/components/CompanyInfo";
+import { WhoWeAre } from "@/components/CompanyInfo";
 
 export default function Home() {
   return (
@@ -31,8 +28,8 @@ export default function Home() {
               of the best!
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard
+              {`Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard`}
             </p>
           </div>
 
@@ -86,15 +83,7 @@ export default function Home() {
       {/* SERVICES SECTION START */}
       {homepageServicesItems.map(
         (
-          {
-            title,
-            description,
-            subHeadingItems,
-            learnMoreLinkUrl,
-            imageUrl,
-            imageHeight,
-            imageWidth,
-          },
+          { title, description, subHeadingItems, learnMoreLinkUrl, imageUrl },
           i
         ) => (
           <ServicesSection
@@ -104,51 +93,53 @@ export default function Home() {
             subHeadingItems={subHeadingItems}
             learnMoreLinkUrl={learnMoreLinkUrl}
             imageUrl={imageUrl}
-            flipAlignment={i % 2 === 0}
-            imageHeight={imageHeight}
-            imageWidth={imageWidth}
+            flipAlignment={i % 2 !== 0}
           />
         )
       )}
       {/* SERVICES SECTION END */}
 
-      <section className="container md:p-20 p-6 flex max-md:flex-col items-center gap-16">
+      <section className=" md:p-20 p-6 w-full">
         <WhoWeAre />
-        <OurAim />
       </section>
 
       {/* Testimonial Section */}
-      <section className="px-5 pt-16 pb-12 md:px-32 bg-gray-100">
-        <div>
-          <div className="space-y-4 mb-12">
-            <p className="text-primary font-accent text-xl font-semibold text-center">
+      {/* Testimonials Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <div className="text-blue-600 font-bold text-lg mb-4">
               TESTIMONIALS
-            </p>
-            <h3 className=" text-center">SEE WHAT OUR STUDENTS HAVE TO SAY</h3>
-            <div className="w-32 h-2 bg-primary mx-auto"></div>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+              SEE WHAT OUR STUDENTS HAVE TO SAY
+            </h2>
+            <div className="w-32 h-2 bg-blue-600 mx-auto"></div>
           </div>
-          <Carousel className="w-[90%] mx-auto">
-            <CarouselContent className="">
-              {testimonialData.map((testimonial) => {
-                const color = testimonial.id % 2 === 0 ? "#9D1B28" : "#2F41A6";
-                return (
-                  <CarouselItem
-                    key={testimonial.id}
-                    className="lg:basis-1/3 max-md:basis-full"
-                  >
-                    <TestimonialCard
-                      color={color}
-                      name={testimonial.name}
-                      testimonialText={testimonial.testimonialText}
-                      position={testimonial.position}
-                    />
-                  </CarouselItem>
-                );
-              })}
-            </CarouselContent>
-            <CarouselPrevious className="max-md:-left-8" />
-            <CarouselNext className="max-md:-right-8" />
-          </Carousel>
+
+          <div className="relative max-w-6xl mx-auto">
+            <Carousel className="w-full mx-auto">
+              <CarouselContent>
+                {testimonialData.map((testimonial, i) => {
+                  return (
+                    <CarouselItem
+                      key={testimonial.id}
+                      className="lg:basis-1/3 max-md:basis-full"
+                    >
+                      <TestimonialCard
+                        color={i % 2 === 0 ? "blue" : "red"}
+                        name={testimonial.name}
+                        testimonialText={testimonial.testimonialText}
+                        position={testimonial.position}
+                      />
+                    </CarouselItem>
+                  );
+                })}
+              </CarouselContent>
+              <CarouselPrevious className="max-md:-left-8" />
+              <CarouselNext className="max-md:-right-8" />
+            </Carousel>
+          </div>
         </div>
       </section>
       {/*Testimonial End*/}

@@ -1,6 +1,7 @@
 export const testimonialData = [
   {
     id: 1,
+    color: "blue",
     name: "Rijan Niraula",
     position: "Student",
     testimonialText:
@@ -9,6 +10,7 @@ export const testimonialData = [
   },
   {
     id: 2,
+    color: "blue",
     name: "Rijan Niraula",
     position: "Student",
     testimonialText:
@@ -17,6 +19,7 @@ export const testimonialData = [
   },
   {
     id: 3,
+    color: "blue",
     name: "Rijan Niraula",
     position: "Student",
     testimonialText:
@@ -25,6 +28,7 @@ export const testimonialData = [
   },
   {
     id: 4,
+    color: "blue",
     name: "Rijan Niraula",
     position: "Student",
     testimonialText:
@@ -33,6 +37,7 @@ export const testimonialData = [
   },
   {
     id: 5,
+    color: "blue",
     name: "Rijan Niraula",
     position: "Student",
     testimonialText:
@@ -69,10 +74,8 @@ export const homepageServicesItems = [
         ],
       },
     ],
-    learnMoreLinkUrl: "/german-language-classes",
+    learnMoreLinkUrl: "/services/german-language-classes",
     imageUrl: "/service_1_classes.jpg",
-    imageWidth: 600,
-    imageHeight: 600,
   },
   {
     title: "Expert Au Pair Visa Processing Services",
@@ -100,10 +103,8 @@ export const homepageServicesItems = [
         ],
       },
     ],
-    learnMoreLinkUrl: "/au-pair-visa",
-    imageUrl: "/au-pair.png",
-    imageWidth: 480,
-    imageHeight: 480,
+    learnMoreLinkUrl: "/services/au-pair-visa",
+    imageUrl: "/visa-mobile.jpg",
   },
   {
     title: "Streamlined Study Visa Processing Services",
@@ -131,10 +132,8 @@ export const homepageServicesItems = [
         ],
       },
     ],
-    learnMoreLinkUrl: "/study-visa",
-    imageUrl: "/visa-service.png",
-    imageWidth: 500,
-    imageHeight: 500,
+    learnMoreLinkUrl: "/services/student-visa",
+    imageUrl: "/student-visa.jpg",
   },
 ];
 

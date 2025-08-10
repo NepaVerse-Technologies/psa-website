@@ -12,7 +12,7 @@ const TestimonialCard = ({
   position: string;
 }) => {
   return (
-    <div className="w-full relative rounded-xl shadow-xl border mx-auto overflow-hidden">
+    <div className="w-84 relative rounded-xl shadow-xl border border-gray-300 mx-auto overflow-hidden scale-95 hover:scale-100 transition-all duration-300">
       <div className="p-8 h-full">
         {/* quote part */}
         <svg
@@ -31,32 +31,43 @@ const TestimonialCard = ({
           {testimonialText}
         </p>
       </div>
-      <div className="mt-40"></div>
-      <div className="h-20 w-20 bg-slate-500 absolute bottom-[79px] rounded-full left-0 right-0 ml-auto mr-auto z-10"></div>
-      {/* adding relative because z-index does not work for static positioned elements */}
-      <div className="z-10 absolute bottom-3 left-0 right-0 ml-auto mr-auto">
-        <p className="font-primary text-white font-bold text-lg text-center">
-          {name}
-        </p>
-        <p className="text-center">
-          <span className=" text-sm font-semibold bg-white m-2 px-3 border rounded ">
-            {position}
-          </span>
-        </p>
-      </div>
-      <div className="absolute left-0 bottom-0 w-full">
+      {/* Bottom section with avatar, name, position, and curve */}
+      <div className="relative h-[140px] mt-auto">
+        {/* Curve SVG */}
         <svg
           width="100%"
-          fill="none"
+          height="100%"
           viewBox="0 0 340 140"
+          fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          className="absolute inset-0"
         >
-          {/* curve */}
           <path
             d="M99.5 0.613669C34.5 -5.7184 0 39.0389 0 39.0389V151H343V35.356C343 35.356 311.36 51.9887 274.601 53.7708C208.878 56.957 164.5 6.94574 99.5 0.613669Z"
             fill={color}
           />
         </svg>
+
+        {/* Avatar and text */}
+        <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center pb-3 z-10">
+          <div
+            className={`h-20 w-20  rounded-full flex items-center justify-center -mt-10 mb-2`}
+          >
+            {/* Placeholder for image or initials */}
+            <span className="text-white font-bold text-3xl p-6 rounded-full bg-gray-400">
+              {name
+                .split(" ")
+                .map((n) => n[0])
+                .join("")}
+            </span>
+          </div>
+          <p className="font-bold text-lg text-white text-center">{name}</p>
+          <p className="text-center">
+            <span className="text-sm font-semibold bg-white m-2 px-3 py-1 border rounded text-gray-700">
+              {position}
+            </span>
+          </p>
+        </div>
       </div>
     </div>
   );

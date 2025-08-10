@@ -1,6 +1,7 @@
 export const testimonialData = [
   {
     id: 1,
+    color: "blue",
     name: "Rijan Niraula",
     position: "Student",
     testimonialText:
@@ -9,6 +10,7 @@ export const testimonialData = [
   },
   {
     id: 2,
+    color: "blue",
     name: "Rijan Niraula",
     position: "Student",
     testimonialText:
@@ -17,6 +19,7 @@ export const testimonialData = [
   },
   {
     id: 3,
+    color: "blue",
     name: "Rijan Niraula",
     position: "Student",
     testimonialText:
@@ -25,6 +28,7 @@ export const testimonialData = [
   },
   {
     id: 4,
+    color: "blue",
     name: "Rijan Niraula",
     position: "Student",
     testimonialText:
@@ -33,6 +37,7 @@ export const testimonialData = [
   },
   {
     id: 5,
+    color: "blue",
     name: "Rijan Niraula",
     position: "Student",
     testimonialText:
@@ -52,17 +57,25 @@ export const homepageServicesItems = [
         title: "Beginner",
         description:
           "Start your German language journey with our comprehensive beginner's course.",
+        bulletPoints: [
+          "A1-A2 Level Coverage",
+          "Interactive Learning",
+          "Native Instructors",
+        ],
       },
       {
         title: "Intermediate",
         description:
           "Take your German language skills to the next level with our advanced courses.",
+        bulletPoints: [
+          "B1-B2 Level Coverage",
+          "Exam Preparation",
+          "Cultural Integration",
+        ],
       },
     ],
-    learnMoreLinkUrl: "/german-language-classes",
-    imageUrl: "/flag.png",
-    imageWidth: 600,
-    imageHeight: 600,
+    learnMoreLinkUrl: "/services/german-language-classes",
+    imageUrl: "/service_1_classes.jpg",
   },
   {
     title: "Expert Au Pair Visa Processing Services",
@@ -73,17 +86,25 @@ export const homepageServicesItems = [
         title: "Supportive",
         description:
           "Our team is dedicate to providing personalized support and guidance throughout the visa application process.",
+        bulletPoints: [
+          "Personalized Support",
+          "Guidance throughout the visa application process",
+          "Assistance with documentation",
+        ],
       },
       {
         title: "Efficient",
         description:
           "We streamlined the visa processing procedure, ensuring quick and efficient results.",
+        bulletPoints: [
+          "Streamlined Visa Processing",
+          "Quick and Efficient Results",
+          "Assistance with documentation",
+        ],
       },
     ],
-    learnMoreLinkUrl: "/au-pair-visa",
-    imageUrl: "/au-pair.png",
-    imageWidth: 480,
-    imageHeight: 480,
+    learnMoreLinkUrl: "/services/au-pair-visa",
+    imageUrl: "/visa-mobile.jpg",
   },
   {
     title: "Streamlined Study Visa Processing Services",
@@ -94,17 +115,25 @@ export const homepageServicesItems = [
         title: "Assistance",
         description:
           "We after personalized assistance in preparing and submitting your study visa application.",
+        bulletPoints: [
+          "Personalized Assistance",
+          "Guidance throughout the visa application process",
+          "Assistance with documentation",
+        ],
       },
       {
         title: "Documentation",
         description:
           "Our team helps you gather and organize all the necessary documentation.",
+        bulletPoints: [
+          "Streamlined Visa Processing",
+          "Quick and Efficient Results",
+          "Assistance with documentation",
+        ],
       },
     ],
-    learnMoreLinkUrl: "/study-visa",
-    imageUrl: "/visa-service.png",
-    imageWidth: 500,
-    imageHeight: 500,
+    learnMoreLinkUrl: "/services/student-visa",
+    imageUrl: "/student-visa.jpg",
   },
 ];
 

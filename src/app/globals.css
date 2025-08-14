@@ -172,3 +172,9 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}

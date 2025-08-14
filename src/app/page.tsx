@@ -81,22 +81,8 @@ export default function Home() {
       {/* HIGHLIGHT SECTION END */}
 
       {/* SERVICES SECTION START */}
-      {homepageServicesItems.map(
-        (
-          { title, description, subHeadingItems, learnMoreLinkUrl, imageUrl },
-          i
-        ) => (
-          <ServicesSection
-            key={title}
-            title={title}
-            description={description}
-            subHeadingItems={subHeadingItems}
-            learnMoreLinkUrl={learnMoreLinkUrl}
-            imageUrl={imageUrl}
-            flipAlignment={i % 2 !== 0}
-          />
-        )
-      )}
+      <ServicesSection />
+
       {/* SERVICES SECTION END */}
 
       <section className=" md:p-20 p-6 w-full">

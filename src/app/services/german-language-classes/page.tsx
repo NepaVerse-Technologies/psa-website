@@ -100,7 +100,7 @@ const GermanLanguageClassesPage = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:px-20 px-6">
-            {courseLevels.map((course, index) => (
+            {courseLevels.map((course) => (
               <Card
                 key={course.level}
                 className="relative hover:shadow-xl transition-shadow duration-300"
@@ -135,7 +135,7 @@ const GermanLanguageClassesPage = () => {
 
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-3">
-                      What You'll Learn:
+                      {` What You'll Learn:`}
                     </h4>
                     <ul className="space-y-2">
                       {course.skills.map((skill, skillIndex) => (

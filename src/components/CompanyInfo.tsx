@@ -2,20 +2,17 @@ import React from "react";
 
 export const WhoWeAre = () => {
   return (
-    <div className="container">
-      <div className="mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-          Who <span className="text-blue-600">We Are</span>
-        </h2>
-        <p className="text-gray-600 text-lg mb-6">
-          Pioneer Sprach Academy is a leading educational consultancy
-          specializing in German language training and visa processing services.
-          With over 5 years of experience, we have successfully guided more than
-          2000 students in achieving their dreams of studying and working in
-          Germany.
-        </p>
-        <StatisticsRow />
-      </div>
+    <div className="mb-12 w-full">
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
+        Who <span className="text-blue-600">We Are</span>
+      </h2>
+      <p className="text-gray-600 text-lg ">
+        Pioneer Sprach Academy is a leading educational consultancy specializing
+        in German language training and visa processing services. With over 5
+        years of experience, we have successfully guided more than 2000 students
+        in achieving their dreams of studying and working in Germany.
+      </p>
+      <StatisticsRow />
     </div>
   );
 };

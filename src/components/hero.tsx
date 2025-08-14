@@ -1,8 +1,11 @@
+"use client";
 import React from "react";
 import { Button } from "./ui/button";
 import { ChevronRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const Hero = () => {
+  const router = useRouter();
   return (
     <section className="hero-image-background flex pt-16 max-md:pt-24  ">
       <div className="px-8 py-10 md:px-16 md:py-20  space-y-8  bg-gradient-to-r from-black/60 to-white/5 w-full">
@@ -24,7 +27,13 @@ const Hero = () => {
           </p>
         </div>
         <div className="flex gap-4">
-          <Button className=" font-semibold cursor-pointer" variant="default">
+          <Button
+            className=" font-semibold cursor-pointer"
+            variant="default"
+            onClick={() => {
+              router.push("/apply");
+            }}
+          >
             Apply Now
           </Button>
           <Button className="font-semibold cursor-pointer border border-white bg-transparent text-white hover:bg-white hover:text-primary">

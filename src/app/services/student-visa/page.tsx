@@ -1,10 +1,10 @@
-import SubHero from "@/components/subhero";
+import ServiceSubHero from "@/components/subhero";
 import React from "react";
 
 const StudentVisaPage = () => {
   return (
     <div>
-      <SubHero subHeroId="studentvisa" />
+      <ServiceSubHero serviceId="student-visa" />
     </div>
   );
 };

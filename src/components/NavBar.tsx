@@ -68,7 +68,7 @@ export default function NavBar() {
       </header>
       <nav className="p-2 flex justify-center bg-accent  relative">
         <Image
-          src="/PSA_LOGO.png"
+          src="/LOGO.png"
           alt="PSA Logo"
           width={90}
           height={90}
@@ -82,7 +82,7 @@ export default function NavBar() {
             <li key={navItem.label}>
               {navItem.items ? (
                 <div>
-                  <DropdownMenu>
+                  <DropdownMenu modal={false}>
                     <DropdownMenuTrigger asChild>
                       <button
                         type="button"
@@ -139,6 +139,9 @@ export default function NavBar() {
             className=" font-semibold cursor-pointer"
             size="sm"
             variant="default"
+            onClick={() => {
+              router.push("/apply");
+            }}
           >
             Apply Now
           </Button>

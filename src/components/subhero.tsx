@@ -29,7 +29,6 @@ interface ServiceHeroProps {
   highlightedWord: string;
   description: string;
   primaryButtonText: string;
-  secondaryButtonText: string;
 
   // Stats
   stats: HeroStat[];
@@ -49,7 +48,6 @@ const ServiceHeroView = ({
   highlightedWord,
   description,
   primaryButtonText,
-  secondaryButtonText,
   stats,
   backgroundImage,
   backgroundAlt = "Service background",
@@ -60,6 +58,7 @@ const ServiceHeroView = ({
     >
       {backgroundImage && (
         <div className="absolute inset-0">
+          {/* change image */}
           <img
             src={backgroundImage || "/placeholder.svg"}
             alt={backgroundAlt}
@@ -99,8 +98,8 @@ const ServiceHeroView = ({
 
           {/* Quick Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
+            {stats.map((stat) => (
+              <div key={stat.value} className="text-center">
                 <div className={`text-3xl font-bold ${accentColor} mb-1`}>
                   {stat.value}
                 </div>

@@ -9,7 +9,6 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import ServicesSection from "@/components/ServicesSection";
-import { homepageServicesItems } from "@/lib/constants";
 import { BookOpen, Award, HeadphonesIcon } from "lucide-react";
 import { WhoWeAre } from "@/components/CompanyInfo";
 

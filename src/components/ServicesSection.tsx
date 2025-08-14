@@ -22,7 +22,6 @@ type ServicesSectionParams = {
   title: string;
   description: string;
   subHeadingItems: ChildDescItem[];
-  learnMoreLinkUrl: string;
   imageUrl: string;
   flipAlignment: boolean;
   topOfImageText: string;
@@ -33,7 +32,6 @@ function ServicesSectionView({
   title,
   description,
   subHeadingItems,
-  learnMoreLinkUrl,
   imageUrl,
   flipAlignment,
   topOfImageText,
@@ -112,7 +110,7 @@ function ServicesSectionView({
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            {subHeadingItems.map((subItem, index) => (
+            {subHeadingItems.map((subItem) => (
               <div
                 key={subItem.title}
                 className={`bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border-2 ${
@@ -141,7 +139,7 @@ function ServicesSectionView({
                 </p>
 
                 <ul className="space-y-3 text-sm">
-                  {subItem.bulletPoints.map((point, pointIndex) => (
+                  {subItem.bulletPoints.map((point) => (
                     <li key={point} className="flex items-center group">
                       <div
                         className={`p-1 rounded-full mr-3 ${
@@ -252,7 +250,6 @@ const ServicesSection = () => {
             title,
             description,
             subHeadingItems,
-            learnMoreLinkUrl,
             imageUrl,
             preTitleText,
             topOfImageText,
@@ -265,7 +262,6 @@ const ServicesSection = () => {
             title={title}
             description={description}
             subHeadingItems={subHeadingItems}
-            learnMoreLinkUrl={learnMoreLinkUrl}
             imageUrl={imageUrl}
             flipAlignment={i % 2 !== 0}
             topOfImageText={topOfImageText}

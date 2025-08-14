@@ -9,7 +9,6 @@ import {
   Clock,
   MessageCircle,
   Award,
-  Globe,
   Send,
   CheckCircle,
 } from "lucide-react";
@@ -32,7 +31,6 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useState } from "react";
-import Footer from "@/components/Footer";
 
 export default function ContactPage() {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -49,6 +47,7 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="relative pt-30 pb-20 bg-gradient-to-r from-blue-800 to-blue-900">
         <div className="absolute inset-0">
+          {/* change image */}
           <img
             src="/placeholder.svg?height=400&width=1200"
             alt="Contact us"
@@ -161,8 +160,9 @@ export default function ContactPage() {
                     Send us a Message
                   </CardTitle>
                   <CardDescription className="text-lg">
-                    Fill out the form below and we'll get back to you within 24
-                    hours. All fields marked with * are required.
+                    {`Fill out the form below and we'll get back to you within 24
+                    hours. All fields marked with `}
+                    * are required.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -173,8 +173,8 @@ export default function ContactPage() {
                         Message Sent Successfully!
                       </h3>
                       <p className="text-gray-600">
-                        Thank you for contacting us. We'll get back to you
-                        within 24 hours.
+                        {`Thank you for contacting us. We'll get back to you
+                        within 24 hours.`}
                       </p>
                     </div>
                   ) : (

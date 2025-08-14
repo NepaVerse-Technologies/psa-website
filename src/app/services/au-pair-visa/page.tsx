@@ -1,4 +1,3 @@
-import AdmissionForm from "@/components/admissionForm";
 import ServiceSubHero from "@/components/subhero";
 import {
   Users,
@@ -148,7 +147,7 @@ const AuPairVisaPage = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {packages.map((pkg, index) => (
+            {packages.map((pkg) => (
               <Card
                 key={pkg.name}
                 className={`relative hover:shadow-xl transition-shadow duration-300 ${
@@ -207,8 +206,8 @@ const AuPairVisaPage = () => {
               Why Choose Our Au Pair Service?
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Experience the benefits of working with Germany's most trusted Au
-              Pair visa specialists
+              {`Experience the benefits of working with Germany's most trusted Au
+              Pair visa specialists`}
             </p>
           </div>
 

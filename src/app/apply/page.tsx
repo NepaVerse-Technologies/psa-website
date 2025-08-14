@@ -351,7 +351,7 @@ export default function ApplyPage() {
                       Service Selection
                     </h3>
                     <p className="text-gray-600 mb-6">
-                      Choose the service you're interested in
+                      {`Choose the service you're interested in`}
                     </p>
                   </div>
 
@@ -519,9 +519,9 @@ export default function ApplyPage() {
                         </SelectItem>
                         <SelectItem value="diploma">Diploma</SelectItem>
                         <SelectItem value="bachelors">
-                          Bachelor's Degree
+                          {`Bachelor's Degree`}
                         </SelectItem>
-                        <SelectItem value="masters">Master's Degree</SelectItem>
+                        <SelectItem value="masters">{`Master's Degree`}</SelectItem>
                         <SelectItem value="phd">PhD</SelectItem>
                         <SelectItem value="other">Other</SelectItem>
                       </SelectContent>
@@ -672,13 +672,13 @@ export default function ApplyPage() {
                       <div className="flex items-center space-x-2">
                         <RadioGroupItem value="expired" id="passport-expired" />
                         <Label htmlFor="passport-expired">
-                          Yes, but it's expired
+                          {`Yes, but it's expired`}
                         </Label>
                       </div>
                       <div className="flex items-center space-x-2">
                         <RadioGroupItem value="no" id="passport-no" />
                         <Label htmlFor="passport-no">
-                          No, I don't have a passport
+                          {`No, I don't have a passport`}
                         </Label>
                       </div>
                     </RadioGroup>
